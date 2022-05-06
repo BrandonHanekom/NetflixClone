@@ -5,7 +5,7 @@ import Thumbnail from './Thumbnail'
 
 interface Props {
   title: string
-  movie: Movie | DocumentData[]
+  movie: Movie
   movies: Movie[]
 }
 

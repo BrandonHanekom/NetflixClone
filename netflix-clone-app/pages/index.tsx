@@ -3,12 +3,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Banner from './components/Banner'
 import Header from './components/Header'
-import { Movie } from '../typings'
 import requests from '../utils/requests'
 import Row from './components/Row'
 import { useState } from 'react'
 import { useRecoilValue } from 'recoil'
-import { modalState } from '../../atoms/modal.Atom'
+import Modal from './components/Modal'
+import { Movie } from '../typings'
+import { modalState } from './atoms/modalAtoms'
 
 interface Props {
   netflixOriginals: Movie[]
@@ -52,7 +53,7 @@ const Home = ({
           <Row title="Documentaries" movies={documentaries} />
         </section>
       </main>
-      {/*Modal*/}
+       {showModal && <Modal/>}
     </div>
   )
 }
